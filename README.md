@@ -1,73 +1,68 @@
-# Marmoset - The Ugly
+# Dictle
 
-Marmoset is an open-source cryptocurrency tracking app that provides live cryptocurrency prices, market trends, and additional functionalities to help users make informed investment decisions. It fetches data from the CoinGecko API and includes features such as price alerts, coin watching, and more, making it a powerful tool for both novice and experienced crypto enthusiasts.
+Dictle is a dictionary app designed to provide users with quick and easy access to definitions, synonyms, antonyms, and example sentences for any word. The app is designed with simplicity and efficiency in mind, making it an ideal tool for students, writers, and anyone looking to expand their vocabulary.
 
 ## Features
 
-- **Live Cryptocurrency Prices:** Get real-time prices for thousands of cryptocurrencies.
-- **Market Trends:** View market trends and historical data to analyze cryptocurrency performance.
-- **Price Alerts:** Set price alerts for specific coins and receive notifications when they reach your target price.
-- **Coin Watching:** Add coins to your watchlist and monitor their performance closely.
-- **Detailed Coin Information:** Access detailed information about each cryptocurrency, including market cap, trading volume, and more.
-- **User-friendly Interface:** Enjoy a clean, intuitive interface designed for ease of use.
+- **Word Definitions**: Get precise definitions for any word.
+- **Synonyms and Antonyms**: Discover similar and opposite words.
+- **Example Sentences**: See how words are used in context.
 
 ## Installation
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/igwefran6-dev/marmoset.git
-    cd marmoset
+    git clone https://github.com/igwefran6/dictle.git
     ```
 
-2. Install the dependencies:
+2. Navigate to the project directory:
     ```bash
-    npm i
+    cd dictle
     ```
 
-3. Start the development server:
+3. Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Start the application:
     ```bash
     npm run dev
     ```
 
 ## Usage
 
-1. **Fetch Data from CoinGecko API:**
-   The app uses the CoinGecko API to fetch real-time cryptocurrency data. Ensure you have a stable internet connection to get the most up-to-date information.
-
-2. **Set Price Alerts:**
-   - Navigate to the coin you want to watch.
-   - Set your desired target price.
-   - Enable notifications to receive alerts when the coin reaches your specified price.
-
-3. **Add Coins to Watchlist:**
-   - Search for the coin you are interested in.
-   - Click the "Add to Watchlist" button to start monitoring its performance.
-
-4. **View Detailed Information:**
-   - Click on any coin to view detailed information, including market cap, trading volume, historical data, and more.
-
-## Configuration
-
-Marmoset allows for customization through its configuration settings. You can adjust notification settings, update the list of coins you are watching, and more.
+1. Open the app in your browser.
+2. Use the search bar to look up any word.
+3. View the word's definition, synonyms, antonyms, and example sentences.
 
 ## Contributing
 
-We welcome contributions from the community! Here’s how you can help:
+We welcome contributions from the community! If you'd like to contribute, please follow these steps:
 
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeature`).
-3. Make your changes and commit them (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Create a new Pull Request.
+2. Create a new branch:
+    ```bash
+    git checkout -b feature-branch
+    ```
+3. Make your changes and commit them:
+    ```bash
+    git commit -m "Add new feature"
+    ```
+4. Push to the branch:
+    ```bash
+    git push origin feature-branch
+    ```
+5. Open a pull request on GitHub.
 
 ## License
 
-Marmoset is open-source and available under the MIT License. See the [LICENSE](LICENSE) file for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 ## Contact
 
-For questions or support, please reach out to the project maintainer at igwefran6@gmail.com.
+For any questions or suggestions, please contact [igwefran6.com](mailto:igwefran6@gmail.com).
 
 ---
 
-Thank you for using Marmoset! We hope this app helps you stay informed and make better investment decisions in the cryptocurrency market.
+Enjoy using Dictle! Expand your vocabulary and enhance your writing with ease.
