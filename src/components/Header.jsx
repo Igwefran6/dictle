@@ -3,7 +3,7 @@ import { mdiBookAlphabet } from "@mdi/js";
 
 const Header = () => {
     return (
-        <header className="bg-blue-500 text-white p-6 pb-4">
+        <header className="bg-blue-500 dark:bg-gray-900 text-white p-6 pb-4">
             <h1 className="text-2xl font-bold flex">
                 <Icon path={mdiBookAlphabet} size="26px" />
                 Dictle.
@@ -29,7 +29,7 @@ const Header = () => {
                     <li>
                         <a
                             href="#contact"
-                            className="hover:underline hover:font-bold "
+                            className="hover:underline hover:font-bold"
                         >
                             Contact
                         </a>
