@@ -3,13 +3,17 @@ import SearchBar from "./components/SearchBar";
 import Footer from "./components/Footer";
 import Body from "./components/Body";
 import EmptyBody from "./components/EmptyBody";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import SearchButton from "./components/SearchButton";
+import ContactPage from "./components/ContactPage";
 
 function App() {
     const [word, setWord] = useState("");
     const [definitions, setDefinitions] = useState(null);
     const [error, setError] = useState(null);
+    const inputRef = useRef(null);
+    const [showContactPage, setShowContactPage] = useState(false);
 
     const fetchDefinitions = async () => {
         try {
@@ -37,13 +41,27 @@ function App() {
             fetchDefinitions();
         }
     };
+
+    const handleButtonClick = () => {
+        inputRef.current.focus();
+    };
+    const handlePageClick = () => {
+        if (showContactPage === true) {
+            setShowContactPage(prev => !prev);
+        }
+    };
+
     return (
-        <div className="min-h-[100svh] flex flex-col ">
-            <Header />
+        <div
+            className="min-h-[100svh] flex flex-col  "
+            
+        >
+            <Header setShowContactPage={setShowContactPage} />
             <SearchBar
                 handleSearch={handleSearch}
                 word={word}
                 setWord={setWord}
+                inputRef={inputRef}
             />
 
             {word === "" ? (
@@ -51,7 +69,8 @@ function App() {
             ) : (
                 <Body definitions={definitions} word={word} error={error} />
             )}
-
+            <SearchButton handleButtonClick={handleButtonClick} />
+            <ContactPage showContactPage={showContactPage} />
             <Footer />
         </div>
     );

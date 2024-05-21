@@ -10,13 +10,14 @@ const SearchBar = props => {
                 size={1}
                 className="text-gray-500 dark:text-gray-400 mr-3"
             />
-            <form onSubmit={(e) => props.handleSearch(e)}>
+            <form onSubmit={e => props.handleSearch(e)}>
                 <input
                     type="text"
                     placeholder="Search..."
                     value={props.word}
                     onChange={e => props.setWord(e.target.value)}
                     className="appearance-none bg-transparent dark:text-gray-100 border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                    ref={props.inputRef}
                 />
             </form>
         </div>
