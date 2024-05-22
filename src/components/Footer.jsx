@@ -14,14 +14,14 @@ const Footer = () => {
                         <Icon path={mdiFacebook} size={1} />
                     </a>
                     <a
-                        href="https://twitter.com"
+                        href="https://twitter.com/igwefran6"
                         className="text-blue-400 hover:text-blue-300"
                     >
                         <Icon path={mdiTwitter} size={1} />
                     </a>
 
                     <a
-                        href="https://github.com"
+                        href="https://github.com/Igwefran6/igwefran6"
                         className="text-gray-400 hover:text-gray-400 transition duration-300 ease-in-out"
                     >
                         <Icon path={mdiGithub} size={1} />

@@ -55,7 +55,7 @@ const ContactPage = ({ showContactPage }) => {
                     <div className="flex items-center justify-between">
                         <button
                             type="submit"
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline dark:text-gray-200 dark:bg-gray-800"
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline dark:text-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
                         >
                             Send
                         </button>

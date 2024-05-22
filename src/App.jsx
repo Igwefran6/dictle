@@ -7,6 +7,8 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import SearchButton from "./components/SearchButton";
 import ContactPage from "./components/ContactPage";
+import CloseButton from "./components/CloseButton";
+import About from "./components/About.jsx";
 
 function App() {
     const [word, setWord] = useState("");
@@ -52,10 +54,7 @@ function App() {
     };
 
     return (
-        <div
-            className="min-h-[100svh] flex flex-col  "
-            
-        >
+        <div className="min-h-[100svh] flex flex-col  ">
             <Header setShowContactPage={setShowContactPage} />
             <SearchBar
                 handleSearch={handleSearch}
@@ -70,6 +69,10 @@ function App() {
                 <Body definitions={definitions} word={word} error={error} />
             )}
             <SearchButton handleButtonClick={handleButtonClick} />
+            <CloseButton
+                setShowContactPage={setShowContactPage}
+                showContactPage={showContactPage}
+            />
             <ContactPage showContactPage={showContactPage} />
             <Footer />
         </div>
