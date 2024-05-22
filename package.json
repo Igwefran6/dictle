@@ -5,10 +5,11 @@
     "type": "module",
     "homepage": "https://igwefran6.github.io/dictle",
     "scripts": {
-        "dev": "vite  --force",
+        "dev": "vite",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",
         "build": "vite build",
+        "serve": "vite preview",
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview"
     },
