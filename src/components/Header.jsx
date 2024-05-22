@@ -1,10 +1,11 @@
 import Icon from "@mdi/react";
 import { mdiBookAlphabet } from "@mdi/js";
+import { Link } from "react-router-dom";
 
 const Header = ({ setShowContactPage }) => {
     const handleClick = e => {
         e.preventDefault();
-        setShowContactPage(prev => !prev)
+        setShowContactPage(prev => !prev);
     };
     return (
         <header className="bg-blue-500 dark:bg-gray-900 text-white p-6 pb-4">
@@ -15,20 +16,23 @@ const Header = ({ setShowContactPage }) => {
             <nav>
                 <ul className="flex space-x-4">
                     <li>
-                        <a
+                       { <Link to="./"
                             href="#home"
                             className="hover:underline hover:font-bold"
                         >
                             Home
-                        </a>
+                        </Link>}
                     </li>
                     <li>
-                        <a
-                            href="#about"
-                            className="hover:underline hover:font-bold "
-                        >
-                            About
-                        </a>
+                        {
+                            <Link
+                                to="/about"
+                                href="#about"
+                                className="hover:underline hover:font-bold "
+                            >
+                                About
+                            </Link>
+                        }
                     </li>
                     <li>
                         <a

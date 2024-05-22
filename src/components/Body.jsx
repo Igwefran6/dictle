@@ -35,18 +35,18 @@ const Body = props => {
                                 </p>
                             ))}
                             <div className="border-l-[2px] border-gray-500">
-                                <p className="ml-2">
+                                <div className="ml-2">
                                     <span className="opacity-75 font-bold">
                                         antonym(s):
                                     </span>
                                     {<List listData={meaning.antonyms} />}
-                                </p>
-                                <p className="ml-2">
+                                </div>
+                                <div className="ml-2">
                                     <span className="opacity-75 font-bold">
                                         synonym(s):
                                     </span>
                                     {<List listData={meaning.synonyms} />}
-                                </p>
+                                </div>
                             </div>
                         </div>
                     ))}
