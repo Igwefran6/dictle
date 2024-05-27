@@ -16,17 +16,20 @@ const Header = ({ setShowContactPage }) => {
             <nav>
                 <ul className="flex space-x-4">
                     <li>
-                       { <Link to="./"
-                            href="#home"
-                            className="hover:underline hover:font-bold"
-                        >
-                            Home
-                        </Link>}
+                        {
+                            <Link
+                                to="/home/"
+                                href="#home"
+                                className="hover:underline hover:font-bold"
+                            >
+                                Home
+                            </Link>
+                        }
                     </li>
                     <li>
                         {
                             <Link
-                                to="/about"
+                                to="/about/"
                                 href="#about"
                                 className="hover:underline hover:font-bold "
                             >

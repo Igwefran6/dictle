@@ -8,7 +8,7 @@ const About = () => {
         <>
             <div className="max-w-4xl mx-auto p-6 bg-white shadow-md dark:bg-gray-600 dark:text-gray-200">
                 <div className="p-2 border-2 mt-2 mb-4 bg-gray-800 hover:bg-gray-700">
-                    <Link to="/">
+                    <Link to="/home/">
                         <Icon path={mdiArrowLeft} size="24px" />
                     </Link>
                 </div>
