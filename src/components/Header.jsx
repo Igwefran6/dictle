@@ -18,7 +18,7 @@ const Header = ({ setShowContactPage }) => {
                     <li>
                         {
                             <Link
-                                to="/home/"
+                                to="/"
                                 href="#home"
                                 className="hover:underline hover:font-bold"
                             >
@@ -29,7 +29,7 @@ const Header = ({ setShowContactPage }) => {
                     <li>
                         {
                             <Link
-                                to="/about/"
+                                to="/about"
                                 href="#about"
                                 className="hover:underline hover:font-bold "
                             >
