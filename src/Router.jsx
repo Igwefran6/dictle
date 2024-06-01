@@ -3,22 +3,22 @@ import App from "./App.jsx";
 import { createBrowserRouter } from "react-router-dom";
 import Err404 from "./components/Err404.jsx";
 
-const Router = createBrowserRouter([
+const Routes = createBrowserRouter([
     {
         path: "/",
         element: <App />,
-        errorElement: <Err404 />,
-        children: [
-            {
-                path: "/about",
-                element: <About />
-            }
-        ]
+        errorElement: <Err404 />
     },
     {
-        path: "/about/",
-        element: <About />
+        path: "/dictle",
+        element: <App />,
+        errorElement: <Err404 />
+    },
+    {
+        path: "/dictle/about",
+        element: <About />,
+        errorElement: <Err404 />
     }
 ]);
 
-export default Router;
+export default Routes;

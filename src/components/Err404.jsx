@@ -9,7 +9,7 @@ const Err404 = () => {
                 </span>
                 Click{" "}
                 {
-                    <Link className="underline" to="/">
+                    <Link className="underline" to="/dictle">
                         here
                     </Link>
                 }{" "}

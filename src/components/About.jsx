@@ -8,7 +8,7 @@ const About = () => {
         <>
             <div className="max-w-4xl mx-auto p-6 bg-white shadow-md dark:bg-gray-600 dark:text-gray-200">
                 <div className="p-2 border-2 mt-2 mb-4 bg-gray-800 hover:bg-gray-700">
-                    <Link to="/">
+                    <Link to="/dictle">
                         <Icon path={mdiArrowLeft} size="24px" />
                     </Link>
                 </div>
@@ -59,8 +59,8 @@ const About = () => {
                 <p className="text-gray-700 dark:text-gray-200">
                     If you're a developer like me you can improve Dictle by
                     adding more funtionalites. All you have to do is fork it
-                    from github repo, make improvements and create a pull request.
-                    Thanks.
+                    from github repo, make improvements and create a pull
+                    request. Thanks.
                 </p>
             </div>
             <Footer />
