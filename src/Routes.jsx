@@ -10,12 +10,7 @@ const Routes = createBrowserRouter([
         errorElement: <Err404 />
     },
     {
-        path: "/dictle",
-        element: <App />,
-        errorElement: <Err404 />
-    },
-    {
-        path: "/dictle/about",
+        path: "/about",
         element: <About />,
         errorElement: <Err404 />
     }

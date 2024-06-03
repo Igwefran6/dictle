@@ -104,7 +104,7 @@ const ContactPage = ({ showContactPage }) => {
                     <div className="mb-4">
                         <ReCAPTCHA
                             ref={recaptchaRef}
-                            sitekey="6Lc_zOQpAAAAAD6V5XzQXxMeDvM5IW3uHx_-8Rdc"
+                            sitekey="6Lf_zuQpAAAAALwSqSe5w8uiVMTDflU6ChG2L7Fn"
                             onChange={handleRecaptchaChange}
                         />
                     </div>
