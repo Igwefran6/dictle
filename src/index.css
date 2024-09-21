@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer {
+  .no-copy {
+    user-select: none;
+  }
+  .dropdown::after {
+    content: "🢓";
+    font-size: 16px;
+    margin-left: 8px;
+  }
+}
