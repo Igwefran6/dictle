@@ -102,5 +102,4 @@ const getRandomHardQuizzes = (quizArray, numOfQuestions) => {
 // Export 10 random harder quizzes
 const randomHardEnglishQuizzes = getRandomHardQuizzes(hardEnglishQuiz, 10);
 
-console.log(randomHardEnglishQuizzes); // Log or export the randomized harder quizzes
 export default randomHardEnglishQuizzes;

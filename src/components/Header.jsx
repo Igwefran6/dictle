@@ -91,13 +91,13 @@ const Header = ({ setShowContactPage }) => {
                 Vocabulary tool
               </Link>
               <Link
-                to="/english-synonyms"
+                to="/synonyms"
                 className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
               >
                 English Synonyms
               </Link>
               <Link
-                to="/english-antonyms"
+                to="/antonyms"
                 className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
               >
                 English Antonyms

@@ -78,5 +78,4 @@ const getRandomQuizzes = (quizArray, numOfQuestions) => {
 // Export 10 random quizzes
 const randomEasyEnglishQuizzes = getRandomQuizzes(englishQuiz, 10);
 
-console.log(randomEasyEnglishQuizzes); // Log or export the randomized quizzes
 export default randomEasyEnglishQuizzes;
