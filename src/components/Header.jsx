@@ -69,37 +69,36 @@ const Header = ({ setShowContactPage }) => {
           <div ref={learningToolsRef}>
             <LinkButton
               text="Learning tools"
-              path="/"
               extraStyles="dropdown"
               handleClick={handleOpenLearningTools}
             />
             <span
               className={
-                `absolute w-48 bg-white rounded-lg p-4 flex-col gap-1 ` +
+                `absolute w-48 bg-white rounded-lg p-4 flex-col gap-1 shadow-lg ` +
                 (learningTools ? "flex" : "hidden")
               }
             >
               <Link
-                to="/"
-                className="w-full text-white bg-slate-500 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
+                to="/quiz"
+                className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
               >
                 Quiz
               </Link>
               <Link
-                to="/"
-                className="w-full text-white bg-slate-500 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
+                to="/vocabulary-tool"
+                className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
               >
                 Vocabulary tool
               </Link>
               <Link
-                to="/"
-                className="w-full text-white bg-slate-500 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
+                to="/english-synonyms"
+                className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
               >
                 English Synonyms
               </Link>
               <Link
-                to="/"
-                className="w-full text-white bg-slate-500 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
+                to="/english-antonyms"
+                className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
               >
                 English Antonyms
               </Link>
@@ -109,31 +108,30 @@ const Header = ({ setShowContactPage }) => {
           <div ref={projectRef}>
             <LinkButton
               text="Project"
-              path="/"
               extraStyles="dropdown"
               handleClick={handleProject}
             />
             <span
               className={
-                `absolute w-48 bg-white rounded-lg p-4 flex-col gap-1 ` +
+                `absolute w-48 bg-white rounded-lg p-4 flex-col gap-1 shadow-lg ` +
                 (project ? "flex" : "hidden")
               }
             >
               <Link
-                to="/"
-                className="w-full text-white bg-slate-500 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
+                to="/learn-more"
+                className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
               >
                 Learn more
               </Link>
               <Link
-                to="/"
-                className="w-full text-white bg-slate-500 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
+                to="/about"
+                className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
               >
                 About project
               </Link>
               <Link
                 to="/"
-                className="w-full text-white bg-slate-500 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
+                className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
               >
                 Bla bla bla
               </Link>
