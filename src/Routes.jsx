@@ -7,6 +7,8 @@ import Synonyms from "./components/Synonyms.jsx";
 import Antonyms from "./components/Antonyms.jsx";
 import Dictionary from "./components/Dictionary.jsx";
 import ContactPage from "./components/ContactPage.jsx";
+import LearningPath from "./components/LearningPath.jsx";
+import CourseContent from "./components/CourseContent.jsx";
 
 const Routes = createBrowserRouter([
   {
@@ -42,6 +44,16 @@ const Routes = createBrowserRouter([
   {
     path: "/feedback",
     element: <ContactPage />,
+    errorElement: <Err404 />,
+  },
+  {
+    path: "/learning-path",
+    element: <LearningPath />,
+    errorElement: <Err404 />,
+  },
+  {
+    path: "/course-content",
+    element: <CourseContent />,
     errorElement: <Err404 />,
   },
 ]);

@@ -11,10 +11,10 @@ function Home() {
       <Header setShowContactPage={setShowContactPage} />
       <div className="flex flex-1 p-2 gap-2">
         <div className="relative w-full bg-slate-700 rounded-lg p-12 font-semibold flex flex-col items-center justify-center bg-no-repeat bg-cover text-white bg-[url('/images/dict.png')]">
-          <h2 className="text-5xl text-slate-700 text-center no-copy max-sm:text-4xl">
-            Welcome to Dictle
+          <h2 className="text-5xl text-slate-900 text-center no-copy max-sm:text-4xl">
+            Welcome to <span className="text-white">Dictle</span>
           </h2>
-          <p className="text-slate-700 text-center ">
+          <p className="text-slate-900 text-center ">
             A simple, yet interactive guide to learning english language.
           </p>
           <Link
