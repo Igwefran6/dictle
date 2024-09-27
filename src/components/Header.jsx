@@ -21,9 +21,9 @@ const LinkButton = ({ text, path = "#", handleClick, extraStyles }) => {
 
 const Header = ({ setShowContactPage }) => {
   const [learningTools, setLearningTools] = useState(false);
-  const [project, setProject] = useState(false);
+  const [learningGuide, setlearningGuide] = useState(false);
   const learningToolsRef = useRef(null);
-  const projectRef = useRef(null);
+  const learningGuideRef = useRef(null);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -32,11 +32,11 @@ const Header = ({ setShowContactPage }) => {
 
   const handleOpenLearningTools = () => {
     setLearningTools((prev) => !prev);
-    setProject(false);
+    setlearningGuide(false);
   };
 
-  const handleProject = () => {
-    setProject((prev) => !prev);
+  const handlelearningGuide = () => {
+    setlearningGuide((prev) => !prev);
     setLearningTools(false);
   };
 
@@ -49,8 +49,11 @@ const Header = ({ setShowContactPage }) => {
       ) {
         setLearningTools(false);
       }
-      if (projectRef.current && !projectRef.current.contains(event.target)) {
-        setProject(false);
+      if (
+        learningGuideRef.current &&
+        !learningGuideRef.current.contains(event.target)
+      ) {
+        setlearningGuide(false);
       }
     };
 
@@ -61,11 +64,38 @@ const Header = ({ setShowContactPage }) => {
   }, []);
 
   return (
-    <header className="bg-blue-500 dark:bg-gray-900 text-white p-6 pb-4 flex items-baseline gap-8 relative">
+    <header className="bg-blue-500 dark:bg-gray-900 text-white p-6 pb-4 flex items-baseline gap-8 relative z-50">
       <h1 className="text-2xl font-bold flex ">Dictle.</h1>
       <nav>
         <ul className="flex space-x-4 font-semibold">
           <LinkButton text="Home" path="/" />
+          <div ref={learningGuideRef}>
+            <LinkButton
+              text="Learning guide"
+              extraStyles="dropdown"
+              handleClick={handlelearningGuide}
+            />
+            <span
+              className={
+                `absolute w-48 bg-white rounded-lg p-4 flex-col gap-1 shadow-lg ` +
+                (learningGuide ? "flex" : "hidden")
+              }
+            >
+              <Link
+                to="/learning-path"
+                className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
+              >
+                Learning path
+              </Link>
+              <Link
+                to="/Course-content"
+                className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
+              >
+                Course content
+              </Link>
+            </span>
+          </div>
+
           <div ref={learningToolsRef}>
             <LinkButton
               text="Learning tools"
@@ -85,10 +115,10 @@ const Header = ({ setShowContactPage }) => {
                 Quiz
               </Link>
               <Link
-                to="/vocabulary-tool"
+                to="/dictionary"
                 className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
               >
-                Vocabulary tool
+                Dictionary
               </Link>
               <Link
                 to="/synonyms"
@@ -105,40 +135,7 @@ const Header = ({ setShowContactPage }) => {
             </span>
           </div>
 
-          <div ref={projectRef}>
-            <LinkButton
-              text="Project"
-              extraStyles="dropdown"
-              handleClick={handleProject}
-            />
-            <span
-              className={
-                `absolute w-48 bg-white rounded-lg p-4 flex-col gap-1 shadow-lg ` +
-                (project ? "flex" : "hidden")
-              }
-            >
-              <Link
-                to="/learn-more"
-                className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
-              >
-                Learn more
-              </Link>
-              <Link
-                to="/about"
-                className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
-              >
-                About project
-              </Link>
-              <Link
-                to="/"
-                className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
-              >
-                Bla bla bla
-              </Link>
-            </span>
-          </div>
-
-          <LinkButton text="Contact" handleClick={handleClick} />
+          <LinkButton text="Feedback" path="/feedback" />
         </ul>
       </nav>
     </header>

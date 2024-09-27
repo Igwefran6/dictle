@@ -5,6 +5,8 @@ import Err404 from "./components/Err404.jsx";
 import Quiz from "./components/Quiz.jsx";
 import Synonyms from "./components/Synonyms.jsx";
 import Antonyms from "./components/Antonyms.jsx";
+import Dictionary from "./components/Dictionary.jsx";
+import ContactPage from "./components/ContactPage.jsx";
 
 const Routes = createBrowserRouter([
   {
@@ -30,6 +32,16 @@ const Routes = createBrowserRouter([
   {
     path: "/antonyms",
     element: <Antonyms />,
+    errorElement: <Err404 />,
+  },
+  {
+    path: "/dictionary",
+    element: <Dictionary />,
+    errorElement: <Err404 />,
+  },
+  {
+    path: "/feedback",
+    element: <ContactPage />,
     errorElement: <Err404 />,
   },
 ]);
