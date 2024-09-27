@@ -11,9 +11,12 @@ function Home() {
       <Header setShowContactPage={setShowContactPage} />
       <div className="flex flex-1 p-2 gap-2">
         <div className="relative w-full bg-slate-700 rounded-lg p-12 font-semibold flex flex-col items-center justify-center bg-no-repeat bg-cover text-white bg-[url('/images/dict.png')]">
-          <h2 className="text-5xl text-slate-800 text-center">
+          <h2 className="text-5xl text-slate-700 text-center no-copy max-sm:text-4xl">
             Welcome to Dictle
           </h2>
+          <p className="text-slate-700 text-center ">
+            A simple, yet interactive guide to learning english language.
+          </p>
           <Link
             to="/dictionary"
             className="block text-2xl m-4 py-2 px-4 border-2 rounded-lg bg-slate-900 hover:scale-105 transition-all"

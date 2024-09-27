@@ -1,5 +1,8 @@
+import { mdiMenu, mdiClose } from "@mdi/js";
+import Icon from "@mdi/react";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import MenuForSm from "./MenuForSm";
 
 const LinkButton = ({ text, path = "#", handleClick, extraStyles }) => {
   return (
@@ -24,6 +27,8 @@ const Header = ({ setShowContactPage }) => {
   const [learningGuide, setlearningGuide] = useState(false);
   const learningToolsRef = useRef(null);
   const learningGuideRef = useRef(null);
+  const [menu, setMenu] = useState(false);
+  const icon = menu ? mdiClose : mdiMenu;
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -64,9 +69,18 @@ const Header = ({ setShowContactPage }) => {
   }, []);
 
   return (
-    <header className="bg-blue-500 dark:bg-gray-900 text-white p-6 pb-4 flex items-baseline gap-8 relative z-50">
-      <h1 className="text-2xl font-bold flex ">Dictle.</h1>
-      <nav>
+    <header className="bg-blue-500 dark:bg-gray-900 text-white p-6 pb-4 flex items-baseline gap-8 relative z-40 w-full">
+      <h1 className="text-2xl font-bold flex">Dictle.</h1>
+      <div className="absolute right-6 md:hidden z-50">
+        <Icon
+          onClick={() => setMenu((prev) => !prev)}
+          path={icon}
+          size="32px"
+          color="white"
+        />
+      </div>
+      <MenuForSm menu={menu} />
+      <nav className="max-sm:hidden">
         <ul className="flex space-x-4 font-semibold">
           <LinkButton text="Home" path="/" />
           <div ref={learningGuideRef}>
