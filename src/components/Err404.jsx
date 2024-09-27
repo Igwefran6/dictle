@@ -7,7 +7,7 @@ const Err404 = () => {
         <span className="text-3xl block mb-2">
           <span className="text-5xl">404</span>
           <br />
-          page does not exist
+          page does not exist!
         </span>
         Click{" "}
         {
