@@ -1,77 +1,33 @@
 import Header from "./components/Header";
-import SearchBar from "./components/SearchBar";
 import Footer from "./components/Footer";
-import Body from "./components/Body";
-import EmptyBody from "./components/EmptyBody";
-import { useState, useEffect, useRef } from "react";
-import axios from "axios";
-import SearchButton from "./components/SearchButton";
-import ContactPage from "./components/ContactPage";
-import CloseButton from "./components/CloseButton";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
-  const [word, setWord] = useState("");
-  const [definitions, setDefinitions] = useState(null);
-  const [error, setError] = useState(null);
-  const inputRef = useRef(null);
   const [showContactPage, setShowContactPage] = useState(false);
 
-  const fetchDefinitions = async () => {
-    try {
-      const response = await axios.get(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
-      );
-      setDefinitions(response.data[0]);
-      setError(null);
-    } catch (err) {
-      setDefinitions(null);
-      setError("Word not found");
-    }
-  };
-
-  useEffect(() => {
-    if (word.trim() === "") {
-      setDefinitions(null);
-    }
-  }, [word]);
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (word.trim()) {
-      fetchDefinitions();
-    }
-  };
-
-  const handleButtonClick = () => {
-    inputRef.current.focus();
-  };
-  const handlePageClick = () => {
-    if (showContactPage === true) {
-      setShowContactPage((prev) => !prev);
-    }
-  };
-
   return (
-    <div className="min-h-[100svh] flex flex-col  ">
+    <div className="h-[100svh] flex flex-col  ">
       <Header setShowContactPage={setShowContactPage} />
-      <SearchBar
-        handleSearch={handleSearch}
-        word={word}
-        setWord={setWord}
-        inputRef={inputRef}
-      />
-
-      {word === "" ? (
-        <EmptyBody />
-      ) : (
-        <Body definitions={definitions} word={word} error={error} />
-      )}
-      <SearchButton handleButtonClick={handleButtonClick} />
-      <CloseButton
-        setShowContactPage={setShowContactPage}
-        showContactPage={showContactPage}
-      />
-      <ContactPage showContactPage={showContactPage} />
+      <div className="flex flex-1 p-2 gap-2">
+        <div className="relative w-full bg-slate-700 rounded-lg p-12 font-semibold flex flex-col items-center justify-center bg-no-repeat bg-cover text-white bg-[url('/images/dict.png')]">
+          <h2 className="text-5xl text-slate-700 text-center no-copy max-sm:text-4xl">
+            Welcome to Dictle
+          </h2>
+          <p className="text-slate-700 text-center ">
+            A simple, yet interactive guide to learning english language.
+          </p>
+          <Link
+            to="/dictionary"
+            className="block text-2xl m-4 py-2 px-4 border-2 rounded-lg bg-slate-900 hover:scale-105 transition-all"
+          >
+            Open dictionary
+          </Link>
+          <p className=" absolute bottom-4 left-4 text-slate-900">
+            A language is an extension of your thought for communication.
+          </p>
+        </div>
+      </div>
       <Footer />
     </div>
   );

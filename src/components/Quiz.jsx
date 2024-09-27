@@ -24,9 +24,11 @@ function Quiz() {
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [scoreHistory, setScoreHistory] = useState([]);
   const [leaderboard, setLeaderboard] = useState([]);
+  const [start, setStart] = useState(false);
 
   // Timer Logic
   useEffect(() => {
+    if (!start) return;
     if (timer > 0 && !quizCompleted) {
       const interval = setInterval(() => {
         setTimer(timer - 1);
@@ -35,7 +37,7 @@ function Quiz() {
     } else if (timer === 0) {
       handleTimeOut();
     }
-  }, [timer, quizCompleted]);
+  }, [timer, quizCompleted, start]);
 
   // Handle timeout
   const handleTimeOut = () => {
@@ -260,6 +262,20 @@ function Quiz() {
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+        {!start && (
+          <div className="fixed top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2 p-4 bg-blue-500 dark:bg-slate-700 rounded-lg text-white w-full h-full flex flex-col justify-center items-center gap-4">
+            <p className="max-w-[600px] text-center">
+              This is an English language quiz. Your are expected to answer each
+              question within 15 seconds.
+            </p>
+            <button
+              onClick={() => setStart(true)}
+              className="border-2 p-4 rounded-lg hover:scale-105 bg-green-800 transition-all"
+            >
+              Start Quiz
+            </button>
           </div>
         )}
       </div>

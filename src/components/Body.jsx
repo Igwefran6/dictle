@@ -14,7 +14,7 @@ const Body = (props) => {
   }
 
   return (
-    <div className="grow flex flex-col  p-4 bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-200">
+    <div className="grow flex flex-col  p-4 bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-200">
       <h2 className="font-bold text-2xl opacity-75 ">
         {capitalizeFirstLetter(props.word)}
       </h2>

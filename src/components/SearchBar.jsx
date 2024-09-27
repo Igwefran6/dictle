@@ -4,7 +4,7 @@ import { mdiMagnify } from "@mdi/js";
 
 const SearchBar = (props) => {
   return (
-    <div className="flex items-center border-b border-gray-300 dark:border-gray-500 dark:bg-gray-600 p-4 py-3">
+    <div className="flex items-center border-b border-gray-300 dark:border-gray-500 dark:bg-slate-700 p-4 py-3">
       <Icon
         path={mdiMagnify}
         size={1}
