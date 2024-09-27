@@ -18,10 +18,10 @@ function Home() {
             A simple, yet interactive guide to learning english language.
           </p>
           <Link
-            to="/dictionary"
+            to="/course-content"
             className="block text-2xl m-4 py-2 px-4 border-2 rounded-lg bg-slate-900 hover:scale-105 transition-all"
           >
-            Open dictionary
+            Start Learning
           </Link>
           <p className=" absolute bottom-4 left-4 text-slate-900">
             A language is an extension of your thought for communication.
