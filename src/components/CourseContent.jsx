@@ -8,7 +8,7 @@ const CourseContent = () => {
   return (
     <>
       <Header />
-      <div className="container mx-auto p-6 min-h-[80svh]">
+      <div className="container mx-auto p-6 min-h-screen">
         <h1 className="text-4xl font-bold text-center text-blue-700 mb-8">
           Course Content
         </h1>

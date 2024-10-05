@@ -95,9 +95,8 @@ const Header = ({ setShowContactPage }) => {
                 (learningGuide ? "flex" : "hidden")
               }
             >
-              {" "}
               <Link
-                to="/Course-content"
+                to="/course-content"
                 className="w-full text-white bg-blue-500 dark:bg-gray-900 block rounded-lg px-2 py-1 hover:scale-105 transition-all"
               >
                 Course content
