@@ -8,7 +8,7 @@ function MenuForSm({ menu }) {
     menu && (
       <div className="fixed right-0 top-0 w-2/3 h-[600px] bg-slate-700 px-4 py-20 md:hidden flex flex-col gap-2 justify-center items-start">
         <Link to="/">Home</Link>
-        <button className="dropdown" onClick={() => setX((prev) => !prev)}>
+        <button className="" onClick={() => setX((prev) => !prev)}>
           Learning guide
         </button>
         <div
@@ -19,7 +19,7 @@ function MenuForSm({ menu }) {
             <Link to="/course-content">Course Content</Link>
           </span>
         </div>
-        <button className="dropdown" onClick={() => setY((prev) => !prev)}>
+        <button className="" onClick={() => setY((prev) => !prev)}>
           Learning Tools
         </button>
         <div
