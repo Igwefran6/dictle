@@ -15,8 +15,8 @@ function MenuForSm({ menu }) {
           className={"overflow-hidden transition-all " + (!x ? "h-0" : "h-24")}
         >
           <span className="p-4 mr-2  bg-blue-400 dark:bg-slate-600 text-sm flex flex-col gap-1">
-            <Link to="learning-path">Learning Path</Link>
-            <Link to="course-content">Course Content</Link>
+            <Link to="/learning-path">Learning Path</Link>
+            <Link to="/course-content">Course Content</Link>
           </span>
         </div>
         <button className="dropdown" onClick={() => setY((prev) => !prev)}>
